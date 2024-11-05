@@ -73,5 +73,19 @@ pero primerp tienes que actualizar el apt, despues reinicias el apache
 sudo systemctl restart apache2
 ```
 
+ahora, para solucionar el problema del inicio tenemos que entrar en la carpeta sql y actualizar el mysql.
+
+Vaya a la ruta instalada de XAMPP, para mi está en `/opt/lampp`
+
+Luego encuentra el bin carpeta y ejecutar `mysql_upgrade -u root -p`.
+
+Para mi sistema es:
+```bash
+sudo /opt/lampp/bin/mysql_upgrade -u root -p.
+```
+esscribes la contraseña en caso le hallas puesto, sino solo dale enter
+
+despues todo deberia proceder con normalidad y lo tendras actualziado.^^
+
 [^1]: [XAMPP documentacion](https://www.apachefriends.org/es/faq_linux.html).
 [^2]: pagina donde encontre la solucion al problema: [Aqui](https://dba.stackexchange.com/questions/322866/error-1558-hy000-column-count-of-mysql-proc-is-wrong-how-do-i-solve-this).
